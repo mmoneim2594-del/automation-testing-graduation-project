@@ -76,8 +76,8 @@ public class LoginPage extends BasePage {
         }
         wait.until(ExpectedConditions.urlContains("orangehrm.com"));
         String url = driver.getCurrentUrl();
-        driver.close();                          // close the new tab
-        driver.switchTo().window(original);      // go back to the first tab
+        driver.close();
+        driver.switchTo().window(original);
         return url;
     }
 }

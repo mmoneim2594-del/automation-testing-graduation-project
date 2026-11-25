@@ -8,17 +8,17 @@ public class DriverFactory {
     public static void initDriver() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        DRIVER.set(driver);          // store this thread's browser
+        DRIVER.set(driver);
     }
 
     public static WebDriver getDriver() {
-        return DRIVER.get();         // get this thread's browser
+        return DRIVER.get();
     }
 
     public static void quitDriver() {
         if (DRIVER.get() != null) {
-            DRIVER.get().quit();     // close the browser
-            DRIVER.remove();         // forget it
+            DRIVER.get().quit();
+            DRIVER.remove();
         }
     }
 }

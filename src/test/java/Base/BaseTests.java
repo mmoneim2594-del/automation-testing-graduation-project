@@ -21,7 +21,7 @@ public class BaseTests {
 
     @BeforeMethod
     public void gohome(){
-        DriverFactory.getDriver().manage().deleteAllCookies();   // log out, so the login page opens again
+        DriverFactory.getDriver().manage().deleteAllCookies();
         DriverFactory.getDriver().get(ConfigReader.get("base.url") + "auth/login");
         base = new BasePage(DriverFactory.getDriver());
     }
@@ -31,7 +31,7 @@ public class BaseTests {
         DriverFactory.quitDriver();
     }
 
-    // Used by every test that must be logged in first
+
     protected void loginAsAdmin(){
         Allure.step("Log in as Admin");
         LoginPage loginPage = new LoginPage(DriverFactory.getDriver());

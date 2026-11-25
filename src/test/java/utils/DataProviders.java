@@ -11,7 +11,6 @@ import java.util.List;
 
 public class DataProviders {
 
-    // ---------- JSON reading (runs once) ----------
     private static final JsonNode ROOT;
 
     static {
@@ -25,7 +24,6 @@ public class DataProviders {
         }
     }
 
-    // One value, for tests that need a single fixed item
     public static String getString(String... path) {
         JsonNode n = ROOT;
         for (String p : path) {
@@ -34,7 +32,6 @@ public class DataProviders {
         return n.asText();
     }
 
-    // Turns a JSON list into rows, one column per field name
     private static Object[][] read(String key, String... fields) {
         List<Object[]> rows = new ArrayList<>();
         for (JsonNode item : ROOT.get(key)) {
@@ -47,7 +44,6 @@ public class DataProviders {
         return rows.toArray(new Object[0][]);
     }
 
-    // ---------- DataProviders ----------
     @DataProvider(name = "invalidLogin")
     public static Object[][] invalidLogin() {
         return read("invalidUsers", "username", "password");
