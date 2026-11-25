@@ -14,7 +14,7 @@ public class DataProviders {
     private static final JsonNode ROOT;
 
     static {
-        try (InputStream in = DataProviders.class.getClassLoader().getResourceAsStream("testdata.json")) {
+        try (InputStream in = DataProviders.class.getClassLoader().getResourceAsStream("testData/testdata.json")) {
             if (in == null) {
                 throw new IllegalStateException("testdata.json not found on classpath");
             }

@@ -5,11 +5,8 @@
     { "username": "Admin", "password": "badPassword" }
   ],
   "searchNames": [
-    { "name": "Paul" },
-    { "name": "Linda" }
+    { "name": "Paul" }
   ],
-  "newEmployees": [
-    { "firstName": "Auto", "lastName": "Tester" },
-    { "firstName": "Sara", "lastName": "Ahmed" }
-  ]
+  "unknownEmployee": "Zzxqwvk Notexisting",
+  "newEmployee": { "firstName": "Auto", "lastName": "Tester" }
 }
