@@ -21,13 +21,13 @@ public class BasePage {
         driver.findElement(By.linkText(linkText)).click();
     }
 
-    // Left sidebar item: Admin, PIM, Leave ...
+
     public void clickMenu(String name){
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
                 "//a[contains(@class,'oxd-main-menu-item')][.//span[normalize-space()='" + name + "']]"))).click();
     }
 
-    // Top tab inside a module: Employee List, Add Employee ...
+
     public void clickTopTab(String name){
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
                 "//a[contains(@class,'oxd-topbar-body-nav-tab-item')][normalize-space()='" + name + "']"))).click();
