@@ -1,0 +1,15 @@
+{
+  "validUser": { "username": "Admin", "password": "admin123" },
+  "invalidUsers": [
+    { "username": "wrongUser", "password": "wrongPass123" },
+    { "username": "Admin", "password": "badPassword" }
+  ],
+  "searchNames": [
+    { "name": "Paul" },
+    { "name": "Linda" }
+  ],
+  "newEmployees": [
+    { "firstName": "Auto", "lastName": "Tester" },
+    { "firstName": "Sara", "lastName": "Ahmed" }
+  ]
+}
